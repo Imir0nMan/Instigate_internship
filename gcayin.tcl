@@ -1,19 +1,20 @@
 #tcl gcayin havasarum
-puts "grel havasarman a-i gorcakicy: "
-gets stdin a
-puts "grel havasarman b-i gorcakicy: "
-gets stdin b
-
+#puts "grel havasarman a-i gorcakicy: "
+#gets stdin a
+#puts "grel havasarman b-i gorcakicy: "
+#gets stdin b
+open test2.txt r
+open exit.txt w
 proc gcayin {a b} {
     set x 0
     puts "trvac havasarumn e $a*X = $b"
     if {$a!=0} {
 	set x [expr ($b/$a)]
-    	puts "X = $x"
+ #   	puts "X = $x"
     } elseif { [$a] == 0 && [$b] == 0} {
-        puts "antiv qanaki lucumner"
+  #      puts "antiv qanaki lucumner"
     } else {
-    	puts "havasarumy lucum chuni"
+   # 	puts "havasarumy lucum chuni"
     }
 
 }
