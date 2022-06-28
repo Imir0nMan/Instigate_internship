@@ -6,7 +6,6 @@ def dkrmnt(a,b,c):
     return d
 
 def exprlook(a,b,c):
-    pass
     if (b<0):
         l=""
     else:l="+"
@@ -22,6 +21,7 @@ def gcayin1(b,c):
         return x
     elif(b==0 and c==0):
         print("antiv qanaki lucumner")
+        return True
     else:
         print("havasarumy lucum chuni")
 
@@ -44,7 +44,7 @@ def qarakusayin(a, b, c):
         return x1
     else:
         print("havasarumy lucum chuni")
-        return
+        return False
 
 with open('exit1.txt','w') as q:
  with open('test1.txt', 'r') as pt:
