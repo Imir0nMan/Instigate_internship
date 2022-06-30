@@ -6,7 +6,6 @@ def dkrmnt(a,b,c):
     return d
 
 def exprlook(a,b,c):
-    pass
     if (b<0):
         l=""
     else:l="+"
@@ -22,6 +21,7 @@ def gcayin1(b,c):
         return x
     elif(b==0 and c==0):
         print("antiv qanaki lucumner")
+        return
     else:
         print("havasarumy lucum chuni")
 
