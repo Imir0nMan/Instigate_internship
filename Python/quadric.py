@@ -31,8 +31,8 @@ def qarakusayin(a, b, c):
     else:
         return False
 
-with open('exit1.txt','w') as q:
- with open('test1.txt', 'r') as pt:
+with open('exitQuadric.txt','w') as q:
+ with open('inputQuadric.txt', 'r') as pt:
    x = pt.readlines()
    for i in x:
        k = eval(i.strip())
@@ -40,10 +40,3 @@ with open('exit1.txt','w') as q:
        h = qarakusayin(v,b,n)
        q.write(str(h))
        q.write('\n')
-
-
-#a = int(input("grel a-n "))
-#b = int(input("grel b-n "))
-#c = int(input("grel c-n "))
-
-#num = qarakusayin(a,b,c)
