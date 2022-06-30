@@ -11,9 +11,9 @@ def gcayin1(a,b):
         return False
 
 
-with open('exit2.txt','w') as q:
+with open('exitLinear.txt','w') as q:
     if(os.path.getsize('/home/studentid/scripts/git/Python/test2.txt') > 10):
-         with open('test2.txt', 'r') as pt:
+         with open('inputLinear.txt', 'r') as pt:
             x = pt.readlines()
             for i in x:
                 k = eval(i.strip())
