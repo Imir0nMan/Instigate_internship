@@ -1,7 +1,5 @@
-#include <iostream>
 #include <cmath>
 #include <vector>
-#include <fstream>
 //quadrate file
 
 
@@ -28,28 +26,4 @@ auto qarakusayin(float a, float b, float c){
                 float x1 = mekarmat(a ,b);
                 return std::vector<float>({x1});
         } else return std::vector<float>({0, 0, 0});
-}
-
-int main(){
-	std::ifstream infile;
-	std::ofstream exitfile;
-	infile.open("inputQuadrate.txt");
-	exitfile.open("exitQuadrate.txt");
-	float a,b,c;
-	if(!infile){
-		exitfile<<"ERROR from inputQuadrate.txt file"<<std::endl;
-	}
-	else{	
-		while(infile>>a>>b>>c){
-			auto x = qarakusayin(a,b,c);
-			for(auto&i: x){
-				exitfile<<i<<"  ";
-			}
-			exitfile<<std::endl;
-		}
-	}
-	infile.close();
-	exitfile.close();
-	std::cout<<"quadrate run"<<std::endl;;
-return 0;
 }
