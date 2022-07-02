@@ -17,9 +17,8 @@ return (-b/(2*a));
 
 auto qarakusayin(float a, float b, float c){
 	float d = d_sovorakan(a, b, c);
-    if(a!=0)
-	{
-        if (d>0){
+    if(a!=0){
+                if (d>0){
 			float x1, x2;
 			x1 = (-b-sqrt(d))/(2*a);
 			x2 = (-b+sqrt(d))/(2*a);
