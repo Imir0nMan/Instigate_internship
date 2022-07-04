@@ -25,11 +25,21 @@ void test_quadrate()
 		while(infile >> a >> b >> c)
 		{
 			auto x = qarakusayin(a,b,c);
-			for(auto&i: x)
-			{
-				exitfile << i << "  ";
+			decltype(x) y = std::vector<float>({0, 0});
+			decltype(x) z = std::vector<float>({0, 0, 0});
+			if (x == z){
+				exitfile << "ERROR 007 (There is no solution) " << std::endl;
 			}
-			exitfile << std::endl;
+			else if (x == y){
+				exitfile << "Solution are Real numbers" << std::endl;
+			}
+			else{
+				for(auto&i: x)
+				{
+					exitfile << i << "  ";
+				}
+				exitfile << std::endl;
+			}
 		}
 		exitfile.close();
 		std::ifstream exitfile;

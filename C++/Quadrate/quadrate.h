@@ -3,10 +3,6 @@
 //quadrate file
 
 
-float d_qarrord(float a, float b, float c){
-return ((b/2)*(b/2)-4*a*c);
-}
-
 float d_sovorakan(float a, float b, float c){
 return (b*b-4*a*c);
 }
@@ -28,15 +24,15 @@ auto qarakusayin(float a, float b, float c){
 			return std::vector<float>({x1});
 		} else 
 			return std::vector<float>({0, 0, 0});
-    }else {
-      	if(b==0 && c==0){
-          	return std::vector<float>({0.0})
-		
+    }
+    else {
+      		if(b==0 && c==0){
+          		return std::vector<float>({0, 0});
 		}else if(b==0){
-			return std::vector<float>({0, 0, 0})
+			return std::vector<float>({0, 0, 0});
 		}else{
-			float x1 = c/b
-			return std::vector<float>({x1})
+			float x1 = c/b;
+			return std::vector<float>({x1});
 		} 
 	
     }
