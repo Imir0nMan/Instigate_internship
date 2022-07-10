@@ -10,12 +10,12 @@ def diagonal(matr, numb):
         for k in range(i+1, numb):
             t = matr[k][i]/matr[i][i]
             for j in range(numb+1):
-                matr[k][j] -= t*a[i][j]
+                matr[k][j] -= t*matr[i][j]
     return matr
 
 def gaus(mat, count):
     x = [count]
-    for i in range(count-1, -1, -1):
+    for i in range(count - 1, -1, -1):
         x[i] = mat[i][count]
         for j in range(i+1,count):
             if j != i:
@@ -52,8 +52,10 @@ except:
         exit.write('There is no such file')
 
 with open ('exit.txt', 'w') as exit:
-
+    x = diagonal(mat, line_count)
+    y = gaus(x, line_count)
+    for i in range(line):
+        exit.write(y[i])
     exit.close()
 
-#####################################
 
