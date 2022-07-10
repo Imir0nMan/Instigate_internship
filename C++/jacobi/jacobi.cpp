@@ -43,7 +43,7 @@ void jakobs(ifstream &input, ofstream &output)
 		iter++;
 		int count = 0;
 		for (int i = 0; i < n; ++i)
-                {
+		{
                         maxi = curr[i] - prev [i];
                         if (abs(maxi) <= epsilon)
 			{
@@ -60,7 +60,7 @@ void jakobs(ifstream &input, ofstream &output)
 			}
                         prev[i] = curr[i];
                         output<<prev[i]<<' ';
-                }
+		}
 		output<<endl;
 	}
 }	
