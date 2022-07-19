@@ -23,8 +23,10 @@ set outputfile [open "exitGcd.txt" w+]
 while {[eof $inputfile] !=1} {
 	lappend inputs [gets $inputfile]
 	}
+	puts "$inputs"
 	close $inputfile
 	set length [llength $inputs]
+	puts $length
 	for {set i 0 } {$i < [expr $length -1]} {incr i} {
 		set a [lindex $inputs $i 0]
 		set b [lindex $inputs $i 1]

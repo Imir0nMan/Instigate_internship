@@ -1,68 +1,101 @@
-#include <iostream>
-using namespace std;
+#include "list.h"
 
-struct Node 
-{
-	int data;
-	Node* link;
-};
- 
-Node* head;
-void insert(int a, int n)
-{
-	Node* temp1 = new Node();
-	temp1->data = a;
-	temp1->link = NULL;	
+LinkedList::LinkedList(){
+	m_head = nullptr;
+}
 
-	if (n == 1) {
-		temp1->link = head;
-		head = temp1;
+//////////
+int LinkedList::lenght()
+{
+	int size = 0;
+	Node *temp = m_head;
+
+	while(temp->next != nullptr){
+		temp = temp->next;
+		size++;
+	}
+	size++;
+	return size;
+}
+
+///////////////////////
+void LinkedList::append(double data)
+{
+	Node *last = new Node(data);
+	Node *temp = m_head;
+	if(m_head == nullptr){
+		m_head = last;
+	
 		return;
 	}
-	Node* temp2 = head;
-	for(int i =0; i< n-2; i++)
-	{
-		temp2 = temp2->link;
+	while(temp->next != nullptr){
+		temp = temp->next;
 	}
-	temp1->link = temp2->link;
-	temp2->link = temp1;
-}
- 
-void Print()
-{
-	Node* temp = head;
-	while(temp != NULL)
-	{
-		cout<<temp->data<<" ";
-		temp = temp->link;
-	}
+	temp->next = last;
 }
 
-void Delete(int n)
+/////////////////
+void LinkedList::add_start(double data){
+	Node* temp = m_head;
+	Node* elem = new Node(data);
+	//m_head->next = temp;
+	m_head = elem;
+	m_head->next = temp;
+}
+
+/////////////
+void LinkedList::add_at(double data, int p)
 {
-	Node* temp1 = new Node();
-	Node* temp2 = new Node();
-	temp1 = head;
-	if (n == 1)
-	{
-		head = temp1->link;
-		delete(temp1);
+	int size = lenght();
+	Node *temp = m_head;
+	Node *elem = new Node(data); 
+	if(p <= 0 || p > size+1){
+		std::cout<<"outofrange ";
 		return;
 	}
-	for(int i = 0; i < n-2; i++) 
-	{
-		temp1 = temp1->link;
+	else if(p == size+1){
+		append(data);
+		return;
 	}
-	temp2 = temp1->link;
-	temp1->link = temp2->link;
-	delete(temp2);
+	else if(p == 1){
+		add_start(data);
+		return;
+	}
+	while(p-2){
+		temp = temp->next;
+		p--;
+	}
+	elem->next = temp->next;
+	temp->next = elem;
+}
+////////////////////////
+//////////////////////////////////////////
+void LinkedList::print(){
+	if(m_head == nullptr){
+		std::cout<<"list is empty\n";
+		return;
+	}
+	Node *temp = m_head;
+	while(temp->next != nullptr){
+		std::cout<<temp->data<<"->";
+		temp = temp->next;
+	}
+	std::cout<<temp->data<<"\n";
 }
 
-int main()
-{
-	head = NULL;
-	insert(5,1);
-	insert(3,2);
-	insert(9,3);
-	Print();
+
+//////main Kampf
+
+int main(){
+	LinkedList list;
+	list.append(23);
+	list.append(75);
+	list.append(65);
+	list.append(43);
+	list.append(88);
+	list.print();
+	list.add_at(900, 6);
+	list.add_at(1239, 1);
+	list.print();
+	return 0;
 }

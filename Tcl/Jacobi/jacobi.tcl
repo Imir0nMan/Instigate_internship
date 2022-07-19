@@ -1,13 +1,8 @@
-proc arr lines {
-	foreach line $lines {
-		lappend a [split $line " "]
-	}
-
-	puts $a
-}
-
+proc jacobi {}
 
 set input [open "input.txt" r]
-set all_data [read $input]
-set data [split $all_data "\n"]
-arr $data
+while {[eof $input] != 1} {
+	lappend inputs [gets $input]
+}
+
+puts $inputs
