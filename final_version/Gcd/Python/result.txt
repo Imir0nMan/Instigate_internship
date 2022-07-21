@@ -1,0 +1,16 @@
+4 is equal to 4, test passed
+3 is equal to 3, test passed
+24 is equal to 24, test passed
+1 is equal to 1, test passed
+25 is equal to 25, test passed
+9 is equal to 9, test passed
+1 is equal to 1, test passed
+7 is equal to 7, test passed
+17 is equal to 17, test passed
+3 is equal to 3, test passed
+1 is equal to 1, test passed
+2 is equal to 2, test passed
+2 is equal to 2, test passed
+1 is equal to 1, test passed
+1 is equal to 1, test passed
+1 is equal to 1, test passed

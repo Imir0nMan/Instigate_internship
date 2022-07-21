@@ -1,0 +1,17 @@
+4.0 is equal to 4.0, test passed
+9.0 is equal to 9.0, test passed
+6.0 is equal to 6.0, test passed
+4.43 is equal to 4.43, test passed
+0.03 is equal to 0.03, test passed
+0.2 is equal to 0.2, test passed
+1.8 is equal to 1.8, test passed
+there is no solution is equal to there is no solution, test passed
+2.0 is equal to 2.0, test passed
+0.08 is equal to 0.08, test passed
+11.33 is equal to 11.33, test passed
+0.11 is equal to 0.11, test passed
+0.11 is equal to 0.11, test passed
+0.66 is equal to 0.66, test passed
+0.07 is equal to 0.07, test passed
+1.91 is equal to 1.91, test passed
+solutions are ininite is equal to solutions are ininite, test passed
