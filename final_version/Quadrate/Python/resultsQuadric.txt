@@ -1,0 +1,10 @@
+there is no solution is equal to there is no solution, test passed
+4.0 is equal to 4.0, test passed
+solutions are ininite is equal to solutions are ininite, test passed
+(-5.87, 1.87) is equal to (-5.87, 1.87), test passed
+(-1.5, -1.0) is equal to (-1.5, -1.0), test passed
+(3.83, -1.83) is equal to (3.83, -1.83), test passed
+there is no solution is equal to there is no solution, test passed
+there is no solution is equal to there is no solution, test passed
+(-9.87, -0.38) is equal to (-9.87, -0.38), test passed
+there is no solution is equal to there is no solution, test passed

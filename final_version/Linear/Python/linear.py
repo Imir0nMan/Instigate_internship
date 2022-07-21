@@ -29,11 +29,9 @@ with open('exitLinear.txt','w') as out:
                 if(h == l_elem):
                     result.write(f"{str(h)} is equal to {str(l_elem)}, test passed")
                     result.write('\n')
-                    print(f"{str(h)} is equal to {str(l_elem)}, test passed")
                 else:
                     result.write(f"{str(h)} is not equal to {str(l_elem)}, test failed!")
                     result.write('\n')
-                    print(f"{str(h)} is not equal to {str(l_elem)}, test failed!")
             golden.close(); result.close()
     else:
         out.write(str("Input file is empty!"))
