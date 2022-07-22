@@ -39,7 +39,6 @@ void test_linear(){
         result.close();
         exitfile.close();
         infile.close();
-        std::cout<<"run linear"<<std::endl;
 }
 
 int main(){

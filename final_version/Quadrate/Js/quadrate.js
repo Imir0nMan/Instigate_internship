@@ -22,14 +22,14 @@ const quadrate = (a, b, c) => {
 			else if(d === 0) return oneRoot(a , b);
 			else return NaN;
 		}
-		d = kentD(a, b, c);             
+		d = kentD(a, b, c);
 		if(d > 0){
 			let x1,x2;
 			x1 = Math.round((-b + Math.sqrt(d)) / (2*a)*100)/100;
 			x2 = Math.round((-b - Math.sqrt(d)) / (2*a)*100)/100;
 			let arr = new Array(x1,x2) + '';
 			arr.split(',').join(' ');
-			return  arr;	
+			return  arr;
 		}
 		else if(d === 0) return oneRoot(a , b);
 		return NaN;
@@ -67,7 +67,7 @@ const test = () => {
 
         str +=`\n\nTesting Result:  ${procent}%`
 
-        let result = fs.writeFile('result.txt', str , ()=>console.log('testing...'));
+        let result = fs.writeFile('result.txt', str , ()=>{});
 }
 
 test();

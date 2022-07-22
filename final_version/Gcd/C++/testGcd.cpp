@@ -39,7 +39,6 @@ void test_gcd(){
         result.close();
         exitfile.close();
         infile.close();
-        std::cout<<"run gcd"<<std::endl;
 }
 
 int main(){

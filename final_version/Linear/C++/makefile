@@ -4,16 +4,18 @@ CC = g++
 SRC = $(wildcard *.cpp)
 OBJ = $(patsubst %.cpp, %.o, $(SRC))
 
-all: $(TARGET) run clean
+all: $(TARGET)
 
 $(TARGET): $(OBJ)
-	        $(CC) $(OBJ) -o $(TARGET)
+	        @$(CC) $(OBJ) -o $(TARGET)
 
 %.o : %.cpp
-	        $(CC) -c $< -o $@
+	        @$(CC) -c $< -o $@
 
-run:
-	        ./$(TARGET)
+test:
+	        @./$(TARGET)
+			@echo "Testing..."
 
 clean:
-	        rm $(TARGET) *.o
+	        @rm $(TARGET) *.o exitLinear.txt resultLinear.txt
+			@echo "Cleaning..."

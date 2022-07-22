@@ -7,7 +7,7 @@ NaN = NaN test 6 passed 	 <3
 -0.13,-5.62 = -0.13,-5.62 test 7 passed 	 <3
 -0.38,-0.68 = -0.38,-0.68 test 8 passed 	 <3
 -1.68,-14.32 = -1.68,-14.32 test 9 passed 	 <3
--0.76,-5.23             != -0.76,-5.24 test 10 failed 	 :(
+-0.76,-5.24 = -0.76,-5.24 test 10 passed 	 <3
 
 
-Testing Result:  90%
+Testing Result:  100%

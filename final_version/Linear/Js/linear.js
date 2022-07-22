@@ -32,7 +32,7 @@ const test = () => {
 		}
 	}
 	str += `\n\n Test result   ${procent}%`
-	fs.writeFile('result.txt',str,()=>console.log('test'));
+	fs.writeFile('result.txt',str,()=>{});
 }
 
 test();

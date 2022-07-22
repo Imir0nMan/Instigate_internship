@@ -9,13 +9,15 @@ CXXFLAGS = -std=c++17
 all: $(TARGET) 
 
 $(TARGET): $(OBJ)
-	        $(CC) $(CXXFLAGS) $(OBJ) -o $(TARGET)
+	        @$(CC) $(CXXFLAGS) $(OBJ) -o $(TARGET)
 
 %.o : %.cpp
-	        $(CC) $(CXXFLAGS)  -c $< -o $@
+	        @$(CC) $(CXXFLAGS)  -c $< -o $@
 
-run:
-	        ./$(TARGET)
+test:
+	        @./$(TARGET)
+			@echo "Testing..."
 
 clean:
-	        rm $(TARGET) *.o
+	        @rm $(TARGET) *.o exitQuadrate.txt resultQuadrate.txt
+			@echo "Cleaning..."

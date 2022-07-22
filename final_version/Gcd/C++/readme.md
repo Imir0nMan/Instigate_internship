@@ -1,6 +1,6 @@
 This is a Gsd algorythm in C++ realized recursively
 To compile write 'make' in terminal
-Then write 'make run' to run programm
+Then write 'make test' to run programm
 After type 'make clean' to clan all excessive files 
 Input files name is inputGcd.txt 
 Each line is one test 

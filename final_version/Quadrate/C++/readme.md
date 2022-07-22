@@ -1,6 +1,6 @@
 This is a programm to solve quadratic equations
 To compile write 'make' in terminal
-Then write 'make run' to run programm
+Then write 'make test' to run programm
 After type 'make clean' to clan all excessive files 
 Input files name is inputQudrate.txt 
 Each line is one test 

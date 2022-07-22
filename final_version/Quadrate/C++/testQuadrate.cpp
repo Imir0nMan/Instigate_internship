@@ -65,7 +65,6 @@ void test_quadrate()
 	result.close();
 	exitfile.close();
 	infile.close();
-	std::cout << "1run quadrate" << std::endl;
 }
 
 int main()

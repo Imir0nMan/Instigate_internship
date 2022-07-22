@@ -8,7 +8,7 @@ def bajanarar(a,b):
 
 def main():
     out = open('exitGcd.txt','w')
-    if(os.path.getsize('inputLinear.txt')>2):
+    if(os.path.getsize('inputGcd.txt')>2):
         inpt = open('inputGcd.txt', 'r')
         golden = open('goldenGcd.txt', 'r')
         result = open('result.txt', 'w')
@@ -26,8 +26,8 @@ def main():
             else:
                 result.write(f"{str(h)} is not equal to {str(g_elem)}, test failed!")
                 result.write('\n')
-            out.close(); inpt.close()
-            golden.close(); result.close()
+        out.close(); inpt.close()
+        golden.close(); result.close()
     else:
         out.write(str("Input file is empty"))
 
