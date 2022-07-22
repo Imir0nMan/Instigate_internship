@@ -1,10 +1,10 @@
-This is a Gsd algorythm in Js realized recursively
-Write 'node gcd.js' in terminal to run programm 
+This is a programm to solve quadratic equations
+Write 'node quadrate.js' in terminal to run programm 
 Input files name is input.txt 
 Each line is one test 
-They are given in format "first_number space second_number"
+They are given in format "first_number space second_number space third_number"
 like this:
-12 54
+12 54 8
 You can see compared answers of algorithm and golden answers in result.txt
 In left side are answers that we calculated ourselves
 In the middle are algorythm answers
