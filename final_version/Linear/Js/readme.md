@@ -1,5 +1,6 @@
 This is a programm to solve linear equations
-Write 'node linear.js' in terminal to run programm 
+Write 'make' in terminal to run programm 
+Then ' make clean' to remove generated files
 Input files name is input.txt 
 Each line is one test 
 They are given in format "first_number space second_number"

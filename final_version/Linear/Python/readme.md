@@ -1,5 +1,6 @@
 This is a method to solve linear equations
-Write 'python3 linear.py' in terminal to run programm
+Write 'make' in terminal to run programm
+Then 'make clean' to remove generated files
 Input files name is inputLinear.txt 
 Each line is one test 
 They are given in tuples "(first_number, second_number)"

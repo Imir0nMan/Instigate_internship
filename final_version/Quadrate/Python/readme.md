@@ -1,5 +1,6 @@
 This is a method to solve quadratic equations
-Write 'python3 linear.py' in terminal to run programm
+Write 'make' in terminal to run programm
+Write 'make clean' to remove generated files
 Input files name is inputQuadric.txt 
 Each line is one test 
 They are given in tuples "(first_number, second_number, third_number)"

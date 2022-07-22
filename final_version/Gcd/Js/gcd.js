@@ -12,7 +12,7 @@ var exit1 = '';
 for(let i=0; i<length; i+=2){
 	exit1+=`${gcd(data[i],data[i+1])}\n`;
 }
-fs.writeFile('exit.txt',exit1,()=>console.log('succes'));
+fs.writeFile('exit.txt',exit1,()=>{});
 
 
 const test = () => {

@@ -1,5 +1,6 @@
 This is a Gsd algorythm in Tcl realized recursively
-Then write 'tclsh gcd.tcl' in terminal to run programm
+Write 'make' in terminal to run programm
+Then write 'make clean' to remove generated files
 Input files name is inputGcd.txt 
 Each line is one test 
 They are given in format "first_number space second_number"
