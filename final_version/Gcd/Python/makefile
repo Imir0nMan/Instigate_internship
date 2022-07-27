@@ -1,5 +1,8 @@
-test:Gcd.py
-	@python3 Gcd.py
+run:main.py
+	@python3 main.py
+
+test:test.py
+	@python3 test.py
 
 clean:
-	@rm exitGcd.txt result.txt
+	@rm exit.txt result.txt

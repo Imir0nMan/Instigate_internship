@@ -37,11 +37,11 @@ def qarakusayin(a, b, c):
         return string
 
 def main():
-    out = open('exitQuadric.txt','w')
-    if(os.path.getsize('inputQuadric.txt') > 2):
-        inpt = open('inputQuadric.txt', 'r')
-        golden = open('goldenQuadric.txt', 'r')
-        result = open('resultsQuadric.txt', 'w')
+    out = open('exit.txt','w')
+    if(os.path.getsize('input.txt') > 2):
+        inpt = open('input.txt', 'r')
+        golden = open('golden.txt', 'r')
+        result = open('result.txt', 'w')
         x = inpt.readlines()
         for i in x:
             k = eval(i.strip())
@@ -49,15 +49,7 @@ def main():
             h = str(qarakusayin(v,b,n))
             out.write(str(h))
             out.write('\n')
-            q_elem = golden.readline().strip()
-            if(h == q_elem):
-                result.write(f"{str(h)} is equal to {str(q_elem)}, test passed")
-                result.write('\n')
-            else:
-                result.write(f"{str(h)} is not equal to {str(q_elem)}, test failed!")
-                result.write('\n')
         out.close(); inpt.close()
-        golden.close(); result.close()
     else:
         out.write(str("Input file is empty!"))
 

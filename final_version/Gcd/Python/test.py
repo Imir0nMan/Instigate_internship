@@ -1,16 +1,11 @@
-#Gcd python
 import os
-def bajanarar(a,b):
-    if (b==0):
-        return a
-    else:
-        return bajanarar(b,a%b)
+from main import bajanarar
 
-def main():
-    out = open('exitGcd.txt','w')
-    if(os.path.getsize('inputGcd.txt')>2):
-        inpt = open('inputGcd.txt', 'r')
-        golden = open('goldenGcd.txt', 'r')
+def test():
+    out = open('exit.txt','w')
+    if(os.path.getsize('test_input.txt')>2):
+        inpt = open('test_input.txt', 'r')
+        golden = open('golden.txt', 'r')
         result = open('result.txt', 'w')
         x = inpt.readlines()
         for i in x:
@@ -31,4 +26,4 @@ def main():
     else:
         out.write(str("Input file is empty"))
 
-main()
+test()

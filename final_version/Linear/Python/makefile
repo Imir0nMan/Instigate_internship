@@ -1,5 +1,8 @@
-test:linear.py
-	@python3 linear.py
+run:main.py
+	@python3 main.py
+
+test:test.py
+	@python3 test.py
 
 clean:
-	@rm exitLinear.txt resultsLinear.txt
+	@rm exit.txt result.txt

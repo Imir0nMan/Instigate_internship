@@ -1,5 +1,6 @@
 This is a Gsd algorythm in Python realized recursively
 Write 'make' in terminal to run programm
+Write 'make test' to test programm
 Then 'make clean' to remove generated files
 Input files name is inputGcd.txt 
 Each line is one test 
