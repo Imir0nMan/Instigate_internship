@@ -32,26 +32,35 @@ def gaus(n, matrix):
 def call():
     matrixes = []
     toxer = []
-    out =  open ('exit.txt', 'a')
-    with open('input.txt', 'r') as inpt:
-        for line in inpt:
-            if line != "\n" :
-                toxer.append(list(map(int, line.split())))
-            else:
-                matrixes.append(toxer)
-                toxer = []
-    for i in matrixes:
-        n = len(i[0]) - 1
-        m = n + 1
-        curr_matr = Matrix(n, m)
-        for j in range(len(i)):
-            curr_matr.set_line(j, i[j])
-        x = gaus(n, curr_matr)
+    try:
+        out = open('exit.txt','w')
+        if(os.path.getsize('test_input.txt') > 1):
+            with open('test_input.txt', 'r') as inpt:
+                for line in inpt:
+                    if line != "\n" :
+                            toxer.append(list(map(int, line.split())))
+                    else:
+                        matrixes.append(toxer)
+                        toxer = []
+            for i in matrixes:
+                n = len(i[0]) - 1
+                m = n + 1
+                curr_matr = Matrix(n, m)
+                for j in range(len(i)):
+                    curr_matr.set_line(j, i[j])
+                x =  gaus(n, curr_matr)
+                for i in range(n):
+                    out.write(f" X{i+1} = "+str(round(x[i], 4)))
+                out.write('\n')
+            out.close()
+        else:
+            out.wriite("Input file is empty")
+            out.close()
+    except FileNotFoundError:
+        print("FileNotFoundError: No such file or directory!")
 
-        for i in range(n):
-            out.write(f" X{i+1} = "+str(round(x[i], 4)))
-        out.write('\n')
-    out.close()
+    except ValueError:
+        print("ValueError: given input is invalid")
 
 call()
 

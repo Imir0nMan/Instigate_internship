@@ -52,16 +52,15 @@ def call():
     matrixes = []
     toxer = []
     try:
-        if(os.path.getsize('input.txt') > 0):
+        out = open('exit.txt','w')
+        if(os.path.getsize('input.txt') > 1):
             with open('input.txt', 'r') as inpt:
                 for line in inpt:
                     if line != "\n" :
                             toxer.append(list(map(int, line.split())))
-
                     else:
                         matrixes.append(toxer)
                         toxer = []
-            out = open('exit.txt','w')
             for i in matrixes:
                 n = len(i[0]) - 1
                 m = n + 1
@@ -74,7 +73,8 @@ def call():
                 out.write('\n')
             out.close()
         else:
-            print("Input file is empty")
+            out.write("Input file is empty")
+            out.close()
     except FileNotFoundError:
         print("FileNotFoundError: No such file or directory!")
     except ValueError:

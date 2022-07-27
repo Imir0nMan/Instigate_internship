@@ -4,9 +4,9 @@ from matrix import Matrix
 from main import iterat,calc
 
 def test():
-    out = open('exit_test.txt','r')
-    golden = open('golden_test.txt', 'r')
-    result = open('results_test.txt', 'w')
+    out = open('exit.txt','r')
+    golden = open('golden.txt', 'r')
+    result = open('result.txt', 'w')
     for i in out:
         h = i.strip()
         l_elem = golden.readline().strip()  #gets element from golden results
@@ -23,15 +23,15 @@ def calculation():
     matrixes = []
     toxer = []
     try:
-        if(os.path.getsize('input_test.txt') > 0):
-            with open('input_test.txt', 'r') as inpt:
+        if(os.path.getsize('test_input.txt') > 1):
+            with open('test_input.txt', 'r') as inpt:
                 for line in inpt:
                     if line != "\n" :
                             toxer.append(list(map(int, line.split())))
                     else:
                         matrixes.append(toxer)
                         toxer = []
-            out = open('exit_test.txt','w')
+            out = open('exit.txt','w')
             for i in matrixes:
                 n = len(i[0]) - 1
                 m = n + 1
