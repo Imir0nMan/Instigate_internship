@@ -58,9 +58,11 @@ def call():
             out.close()
     except FileNotFoundError:
         print("FileNotFoundError: No such file or directory!")
-
     except ValueError:
         print("ValueError: given input is invalid")
+    except:
+        print("Something went wrong!")
+
 
 call()
 

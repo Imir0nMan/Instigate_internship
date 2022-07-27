@@ -79,7 +79,8 @@ def call():
         print("FileNotFoundError: No such file or directory!")
     except ValueError:
         print("ValueError: given input is invalid")
-
+    except IndexError:
+        print("IndexError: given index is out of range")
 
 call()
 

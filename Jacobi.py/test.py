@@ -11,10 +11,10 @@ def test():
         h = i.strip()
         l_elem = golden.readline().strip()  #gets element from golden results
         if(h == l_elem):
-            result.write(f"{str(h)} is equal to {str(l_elem)}, test passed")
+            result.write(f"{str(h)}\t is equal to \t{str(l_elem)}, test passed")
             result.write('\n')
         else:
-            result.write(f"{str(h)} is not equal to {str(l_elem)}, test failed!")
+            result.write(f"{str(h)}\t is not equal to \t{str(l_elem)}, test failed!")
             result.write('\n')
     golden.close(); result.close(); out.close()
 
@@ -50,9 +50,8 @@ def calculation():
         print("FileNotFoundError: No such file or directory!")
     except ValueError:
         print("ValueError: given input is invalid")
-
-
-
+    except IndexError:
+        print("IndexError: given index is out of range")
 
 calculation()
 
