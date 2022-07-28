@@ -1,3 +1,0 @@
-X1 = -0.9868 X2 = 0.1711 X3 = -1.2039 is equal to X1 = -0.9868 X2 = 0.1711 X3 = -1.2039, test passed
-X1 = 0.5294 is equal to X1 = 0.5294, test passed
-X1 = -1.25 X2 = 1.5 is equal to X1 = -1.25 X2 = 1.5, test passed

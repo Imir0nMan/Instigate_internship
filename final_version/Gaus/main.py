@@ -34,8 +34,8 @@ def call():
     toxer = []
     try:
         out = open('exit.txt','w')
-        if(os.path.getsize('test_input.txt') > 1):
-            with open('test_input.txt', 'r') as inpt:
+        if(os.path.getsize('input.txt') > 2):
+            with open('input.txt', 'r') as inpt:
                 for line in inpt:
                     if line != "\n" :
                             toxer.append(list(map(int, line.split())))
@@ -54,14 +54,12 @@ def call():
                 out.write('\n')
             out.close()
         else:
-            out.wriite("Input file is empty")
+            out.write("Input file is empty")
             out.close()
     except FileNotFoundError:
         print("FileNotFoundError: No such file or directory!")
     except ValueError:
         print("ValueError: given input is invalid")
-    except:
-        print("Something went wrong!")
 
 
 call()
