@@ -1,27 +1,27 @@
 #include <fstream>
 #include <iostream>
-#include "linear.h"
+#include "gcd.h"
 
-void test_linear(){
-        std::ifstream infile;
+void test_gcd(){
+	std::ifstream infile;
         std::ofstream exitfile;
         std::ifstream golden;
         std::ofstream result;
-        result.open("resultLinear.txt");
-        golden.open("goldenLinear.txt");
-        exitfile.open("exitLinear.txt");
-        infile.open("inputLinear.txt");
+        result.open("result.txt");
+        golden.open("golden.txt");
+        exitfile.open("exit.txt");
+        infile.open("input.txt");
         float a,b;
         if(!infile){
-                exitfile<<"ERROR from inputLinear.txt"<<std::endl;
+                exitfile<<"ERROR from input.txt"<<std::endl;
         }
         else {
                 while(infile>>a>>b){
-                        exitfile<<linear(a,b)<<std::endl;
+                        exitfile<<gcd(a,b)<<std::endl;
                 }
                 exitfile.close();
                 std::ifstream exitfile;
-                exitfile.open("exitLinear.txt");
+                exitfile.open("exit.txt");
                 float c,d;
                 int number = 0;
                 int procent = 100;
@@ -42,6 +42,7 @@ void test_linear(){
 }
 
 int main(){
-        test_linear();
-        return 0;
+	test_gcd();
+	return 0;
 }
+

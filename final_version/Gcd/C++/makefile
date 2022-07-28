@@ -17,5 +17,5 @@ test:
 	@echo "Testing..."
 
 clean:
-	@rm $(TARGET) *.o exitGcd.txt resultGcd.txt
+	@rm $(TARGET) *.o exit.txt result.txt
 	@echo "Cleaning..."

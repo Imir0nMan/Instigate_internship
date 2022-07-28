@@ -11,14 +11,14 @@ void test_quadrate()
 	std::ofstream exitfile;
 	std::ifstream golden;
 	std::ofstream result;
-	result.open("resultQuadrate.txt");
-	golden.open("goldenQuadrate.txt");
-	exitfile.open("exitQuadrate.txt");
-	infile.open("inputQuadrate.txt");
+	result.open("result.txt");
+	golden.open("golden.txt");
+	exitfile.open("exit.txt");
+	infile.open("input.txt");
 	float a,b,c;
 	if(!infile)
 	{
-		exitfile<<"ERROR from inputQuadrate.txt file"<<std::endl;
+		exitfile<<"ERROR from input.txt file"<<std::endl;
 	}
 	else
 	{
@@ -43,7 +43,7 @@ void test_quadrate()
 		}
 		exitfile.close();
 		std::ifstream exitfile;
-		exitfile.open("exitQuadrate.txt");
+		exitfile.open("exit.txt");
 		float c,d;
 		int number = 0;
 		int procent = 100;

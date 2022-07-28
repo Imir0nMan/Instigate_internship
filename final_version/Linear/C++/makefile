@@ -17,5 +17,5 @@ test:
 			@echo "Testing..."
 
 clean:
-	        @rm $(TARGET) *.o exitLinear.txt resultLinear.txt
+	        @rm $(TARGET) *.o exit.txt result.txt
 			@echo "Cleaning..."
