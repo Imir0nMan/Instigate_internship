@@ -1,5 +1,5 @@
 import sys, os
-sys.path.append(os.path.join(os.path.dirname(sys.path[0]),"py_class"))
+sys.path.append(os.path.join(os.path.dirname(sys.path[0]),"../py_class"))
 from matrix import Matrix
 
 with open ('exit.txt', 'w') as out:
