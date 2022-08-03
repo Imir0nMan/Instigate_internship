@@ -1,0 +1,44 @@
+;;syntax-rules
+
+(define-syntax քերակ֊կանոն
+	(syntax-rules ()
+		((_ b1 ...)
+		(syntax-rules b1 ...)))
+)
+
+
+;;define-syntax
+
+(define-syntax սահմ֊քերակ
+	(քերակ֊կանոն ()
+	((_ անուն b1 ...)
+	(define-syntax անուն b1 ...)))
+)
+
+
+;;define
+
+(սահմ֊քերակ սահմ
+	(քերակ֊կանոն ()
+		((սահմ անուն արտ)
+			(define անուն արտ)))
+)
+
+;display
+
+(սահմ֊քերակ տպել
+	(քերակ֊կանոն()
+		((տպել արտ)
+		(display արտ)))
+)
+
+;///////////////
+
+
+
+(սահմ a 5)
+(display a)
+(newline)
+
+
+
